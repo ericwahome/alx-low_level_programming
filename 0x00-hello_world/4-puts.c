@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
-* * main - where the execution begins
-
-*Retun: returned value is 0 when the program executes
-*/
+ * main -This is the  Execution starting point
+ *
+ * Return: Always o when the running suceeds
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
