@@ -2,8 +2,8 @@
 
 /**
 * * main - where the execution begins
-*
-*Retun- returned value is 0 when the program executes
+
+*Retun: returned value is 0 when the program executes
 */
 int main(void)
 {
