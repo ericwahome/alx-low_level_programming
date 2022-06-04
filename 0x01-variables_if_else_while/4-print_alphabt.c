@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - The program starts from here 
- * Return: The return value is o every time it runs
+ *main-starts here
+ *Return:The return value is o every time it runs
  */
 int main(void)
 {
