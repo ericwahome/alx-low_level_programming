@@ -10,7 +10,7 @@ int main(void)
 {
 	char lowcase;
 
-	for (lowcase = 'a'; low <= 'z'; low++)
+	for (lowcase = 'a'; lowcase <= 'z'; low++)
 		putchar(lowcase);
 		printf("\n");
 
