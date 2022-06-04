@@ -3,8 +3,7 @@
 #include <time.h>
 /**
  * main - The program starts from here 
- *
- * Return: The return value is 0 every time it runs
+ * Return: The return value is o every time it runs
  */
 int main(void)
 {
@@ -12,7 +11,6 @@ int main(void)
 
 	e = 'e';
 	q = 'q';
-
 	for (lc = 'a'; lc <= 'z'; lc++)
 	{
 		if (lc != e && lc != q)
