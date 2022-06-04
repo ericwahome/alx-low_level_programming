@@ -2,17 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main - The program starts from here 
+ * main - The program starts from here
  *
  * Return: The return value is 0 every time it runs
  */
 int main(void)
 {
-	char lc;
-
+        char lc;
 	for (lc = 'a'; lc <= 'z'; lc++)
-		putchar(lc);
-		printf("\n");
+                putchar(lc);
+                printf("\n");
 
-	return (0);
+        return (0);
 }
