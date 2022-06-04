@@ -2,14 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- *main-The program starts from here 
+ *main-starts here
  *
- *Return:The return value is 0 every time it runs
+ *Return:The return value is o every time it runs
  */
 int main(void)
 {
 int m;
-for(m = 0; m < 10; m++)
+for (m = 0; m < 10; m++) 
 printf("%d", m);
 printf("\n");
 
