@@ -2,16 +2,16 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * main -This is the  Execution starting point
+ * main - The program starts from here 
  *
- * Return: Always o when the running suceeds
+ * Return: The return value is 0 every time it runs
  */
 int main(void)
 {
-	char lowcase;
+	char lc;
 
-	for(lowcase = 'a'; lowcase <= 'z'; lowcase++)
-		putchar(lowcase);
+	for (lc = 'a'; lc <= 'z'; lc++)
+		putchar(lc);
 		printf("\n");
 
 	return (0);
