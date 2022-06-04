@@ -14,7 +14,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	Lls = n % 10;
+	Lst = n % 10;
 
 	if (Lst > 5)
 		printf("%s %d is %d and is greater than 5\n", sng, n, Lst);
