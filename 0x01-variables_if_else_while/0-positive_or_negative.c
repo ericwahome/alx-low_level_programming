@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
 
 /**
  * main -This is the  Execution starting point
@@ -7,20 +8,18 @@
  * Return: Always o when the running suceeds
  */
 
-int main()
+int main(void)
 {
      int n;
-     printf("Enter Value of n: ");
-     scanf("%d", &n); 
-	if(n<0) {
-  printf("%d is negative",n);
-}
- else if ( n==0 ) { 
-printf("%d is Zero",n);
+    srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
-}
-else{
-printf("%d is positive",n);
-}
-return 0;
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else
+		printf("%d is negative\n", n);
+
+	return (0);
 }
