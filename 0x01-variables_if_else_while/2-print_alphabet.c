@@ -1,17 +1,19 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/**
- * main - The program starts from here
- *
- * Return: The return value is 0 every time it runs
+#include <stdio.h>
+
+/* 
+*Main:Starts executing
+*
+*Return-The retun value is zero
  */
 int main(void)
 {
-        char lc;
-	for (lc = 'a'; lc <= 'z'; lc++)
-                putchar(lc);
-                printf("\n");
-
-        return (0);
+	int n;
+	char lc;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	for (lc=a; lc<z; lc++)
+	putchar(lc)
+	return (0);
 }
