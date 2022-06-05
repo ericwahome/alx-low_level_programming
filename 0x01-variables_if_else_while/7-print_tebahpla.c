@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- *main-Starts here
+ * main - Start point
  *
- *Return:The return value is 0 every time it runs
+ * Return: returns 0 on success
  */
 int main(void)
 {
-	char lc;
-	for (lc = 'z'; lc >= 'a'; lc--)
-		putchar(lc);
-		putchar('\n');
-	return (0);
+char lc;
+for (lc = 'z'; lc >= 'a'; lc--)
+putchar(lc);
+putchar('\n');
+return (0);
 }
