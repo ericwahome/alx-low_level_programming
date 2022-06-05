@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 /**
- * main:Starts here
+ * main - Entry point
  *
- * Return:Return value is 0 every time it runs
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
 char lc;
