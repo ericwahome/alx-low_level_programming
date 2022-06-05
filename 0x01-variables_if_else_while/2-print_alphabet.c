@@ -1,16 +1,17 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-/** 
-*Main:Starts here
-*Return-retuns 0 after running
+/**
+ * main:Starts here
+ *
+ * Return:Return value is 0 every time it runs
  */
-int main(void)
-{
+int main(void){
 char lc;
-for (lc = 'a'; lc <= 'z'; lc++)
-{
+for (lc = 'a'; lc <= 'z'; lc++){
 putchar(lc);
+putchar("\n");
 }
-return 0;
+return (0);
 }
+
