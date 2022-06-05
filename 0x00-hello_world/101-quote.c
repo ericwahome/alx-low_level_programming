@@ -1,14 +1,12 @@
 #include <stdio.h>
 
 /**
- * main -This is the  Execution starting point
+ * main - Starts here
  *
- * Return: Always 1 when the running suceeds
+ * Return: 1 is retuned on success
  */
-
 int main(void)
-{
-    write(STDOUT_FILENO, "and that piece of art is useful" - Dora Korpar, 2015-10-19\n", strlen("and that piece of art is useful" - Dora Korpar, 2015-10-19");
-	return (1);
-}
-
+ {
+write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 61);
+return (1);
+ }
