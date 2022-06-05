@@ -8,13 +8,14 @@
 *Return-The retun value is zero
  */
 int main(void)
-{
-	char lc;
-	int n;
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	for (lc='a'; lc<='z'; lc++)}
-	putchar(lc);
-{
-	return (0);
+	{
+    char lc;
+
+    for(lc='a'; lc<='z'; lc++)
+    {
+        putchar(lc);
+		putchar('\n');
+    }
+
+    return 0;
 }
