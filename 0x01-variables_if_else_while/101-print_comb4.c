@@ -6,7 +6,7 @@
  *
  * Return: is 0 on success
  */
- int main(void)
+int main(void)
 {
 	int m, r, q;
 
@@ -32,5 +32,5 @@
 		}
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
