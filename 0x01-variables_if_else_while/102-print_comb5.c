@@ -7,7 +7,6 @@
  * Return: is 0 on success
  */
 int main(void)
- {
 int m, r;
 for (m = 0; m <= 98; m++)
  {
@@ -22,7 +21,6 @@ if (m == 98 && r == 99)
 continue;
 putchar(',');
 putchar(' ');
- }
  }
 putchar('\n');
 return (0);
