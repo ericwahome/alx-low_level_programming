@@ -2,20 +2,20 @@
 
 /**
  * print_times_table - prints times table for numbers from 0-14
- * @m: An input integer value
- * Return: Returns zero
+ * @n: An input integer value
+ * Return: Nothing
  */
-void print_times_table(int m)
+void print_times_table(int n)
 {
-	int q, r;
+	int i, j;
 
-	if (m > 0 && m < 15)
+	if (n > 0 && n < 15)
 	{
-		for (q = 0; q <= m; q++)
+		for (i = 0; i <= n; i++)
 		{
 			_putchar('0');
-			for (r = 1; r <= m; r++)
-				putformat(q * r;
+			for (j = 1; j <= n; j++)
+				putformat(i * j);
 			_putchar('\n');
 		}
 	}
@@ -23,33 +23,33 @@ void print_times_table(int m)
 
 /**
  * putformat - formatted characters to output
- * @m: number to format
- * Return: Retuns zero
+ * @n: number to format
+ * Return: nothing
  */
-void putformat(int m)
+void putformat(int n)
 {
-	if (m <= 9)
+	if (n <= 9)
 	{
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
 		_putchar(' ');
-		_putchar(m + '0');
+		_putchar(n + '0');
 	}
-	else if (m > 9 && m <= 99)
+	else if (n > 9 && n <= 99)
 	{
 		_putchar(',');
 		_putchar(' ');
 		_putchar(' ');
-		_putchar(m / 10 + '0');
-		_putchar(m % 10 + '0');
+		_putchar(n / 10 + '0');
+		_putchar(n % 10 + '0');
 	}
 	else
 	{
 		_putchar(',');
 		_putchar(' ');
-		_putchar(m / 100 + '0');
-		_putchar(m / 10 % 10 + '0');
-		_putchar(m % 10 + '0');
+		_putchar(n / 100 + '0');
+		_putchar(n / 10 % 10 + '0');
+		_putchar(n % 10 + '0');
 	}
 }
