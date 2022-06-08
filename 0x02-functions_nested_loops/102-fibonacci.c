@@ -17,11 +17,11 @@ int main(void)
 
 	for (m = 2; m < 50; m++)
 	{
-		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
-		if (i == 49)
-			printf("%ld\n", fibonacci[i]);
+		fibonacci[m] = fibonacci[m - 1] + fibonacci[m - 2];
+		if (m == 49)
+			printf("%ld\n", fibonacci[m]);
 		else
-			printf("%ld, ", fibonacci[i]);
+			printf("%ld, ", fibonacci[m]);
 	}
 
 	return (0);
