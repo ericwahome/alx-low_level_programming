@@ -15,7 +15,7 @@ void print_times_table(int m)
 		{
 			_putchar('0');
 			for (r = 1; r <= m; r++)
-				putformat(q * jr;
+				putformat(q * r;
 			_putchar('\n');
 		}
 	}
