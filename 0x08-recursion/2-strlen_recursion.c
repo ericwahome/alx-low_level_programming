@@ -3,7 +3,7 @@
 /**
  * _strlen_recursion - note: no _putchar in local test
  * @s: input
- * Return: Always 0 
+ * Return: Always 0
  */
 int _strlen_recursion(char *s)
 {
