@@ -1,48 +1,44 @@
+#include "main.h"
+#include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <sys/uio.h>
-#include <unistd.h>
 #include <fcntl.h>
 #include <stdlib.h>
 
 /**
- *  * read_textfile - A function that reads a text file and prints
- *   * to the POSIX STDOUT
- *    * @filename: The filename to open
- *     * @letters: The number of letters to read and print
- *      * Return: The number of letters read and printed, or 0 on failure
+ *  * read_textfile - reads a text file and prints it to the POSIX standard output
+ *   * @filename: name of the file to read
+ *    * @letters: number of letters it should read and print
+ *     *
+ *      * Return: actual number of letters it could read and print
  *       */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-		int fdo, fdr, fdw;
-			char *temp;
+		int fd;
+			ssize_t lenr, lenw;
+				char *buffer;
 
-				if (filename == NULL)
-							return (0);
-
-					temp = malloc(sizeof(char) * letters);
-						if (temp == NULL)
-									return (0);
-
-							fdo = open(filename, O_RDONLY);
-								if (fdo < 0)
-										{
-													free(temp);
-															return (0);
-																}
-
-									fdr = read(fdo, temp, letters);
-										if (fdr < 0)
-												{
-															free(temp);
-																	return (0);
-																		}
-
-											fdw = write(STDOUT_FILENO, temp, fdr);
-											ree(temp);
-												close(fo);
-
-													fd	if (fdw < 0)
+					if (filename == NULL)
+								return (0);
+						fd = open(filename, O_RDONLY);
+							if (fd == -1)
+										return (0);
+								buffer = malloc(sizeof(char) * letters);
+									if (buffer == NULL)
+											{
+													close(fd);
 																return (0);
-														return ((ssize_t)fdw);
+																	}
+										lenr = read(fd, buffer, letters);
+											close(fd);
+												if (lenr == -1)
+														{
+																	free(buffer);
+																			return (0);
+																				}
+													lenw = write(STDOUT_FILENO, buffer, lenr);
+														free(buffer);
+															if (lenr != lenw)
+																		return (0);
+																return (lenw);
 }
