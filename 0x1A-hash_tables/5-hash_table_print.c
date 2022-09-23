@@ -1,40 +1,30 @@
 #include "hash_tables.h"
-#include <stdio.h>
-#include <string.h>
-
-int not_last_node(const hash_table_t *ht, hash_node_t *node);
 
 /**
- * hash_table_print - prints the contents of a hash table
+ * hash_table_print - prints a hash table
  * @ht: hash table to print
+ *
+ * Return: void
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i = 0, last_pos = 0;
-	hash_node_t *node = NULL;
+	unsigned long int i;
+	hash_node_t *tmp;
+	char flag = 0; /* 0 while no data has been printed yet */
 
-	if (ht == NULL)
+	if (ht == NULL || ht->array == NULL)
 		return;
-	putchar('{');
-	if (ht)
+	printf("{");
+	for (i = 0; i < ht->size; i++)
 	{
-		for (; i < ht->size - 1; i++)
+		tmp = ht->array[i];
+		while (tmp != NULL)
 		{
-			if (ht->array[i] != NULL)
-				last_pos = i;
-		}
-
-		for (i = 0; i <= last_pos; i++)
-		{
-			node = ht->array[i];
-			while (node)
-			{
-				printf("'%s': '%s'", node->key, node->value);
-				node = node->next;
-				if (i < last_pos - 1)
-					printf(", ");
-			}
-
+			if (flag == 1)
+				printf(", ");
+			printf("'%s': '%s'", tmp->key, tmp->value);
+			flag = 1;
+			tmp = tmp->next;
 		}
 	}
 	printf("}\n");
