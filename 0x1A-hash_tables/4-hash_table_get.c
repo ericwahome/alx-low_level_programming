@@ -1,41 +1,27 @@
 #include "hash_tables.h"
-#include <stdio.h>
-#include <string.h>
-
-int not_last_node(const hash_table_t *ht, hash_node_t *node);
 
 /**
- * hash_table_print - prints the contents of a hash table
- * @ht: hash table to print
+ * hash_table_get - retrieves a value associated with a key
+ * @ht: table to retrieve value from
+ * @key: key to find value
+ *
+ * Return: value associated with key, or NULL if key cannot be found
  */
-void hash_table_print(const hash_table_t *ht)
+char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned long int i = 0, last_pos = 0;
-	hash_node_t *node = NULL;
+	unsigned long int index;
+	hash_node_t *tmp;
 
-	if (ht == NULL)
-		return;
-	putchar('{');
-	if (ht)
+	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
+	    key == NULL || strlen(key) == 0)
+		return (NULL);
+	index = key_index((const unsigned char *)key, ht->size);
+	tmp = ht->array[index];
+	while (tmp != NULL)
 	{
-		for (; i < ht->size - 1; i++)
-		{
-			if (ht->array[i] != NULL)
-				last_pos = i;
-		}
-
-		for (i = 0; i <= last_pos; i++)
-		{
-			node = ht->array[i];
-			while (node)
-			{
-				printf("'%s': '%s'", node->key, node->value);
-				node = node->next;
-				if (i < last_pos - 1)
-					printf(", ");
-			}
-
-		}
+		if (strcmp(tmp->key, key) == 0)
+			return (tmp->value);
+		tmp = tmp->next;
 	}
-	printf("}\n");
+	return (NULL);
 }
